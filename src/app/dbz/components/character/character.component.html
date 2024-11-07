@@ -1,0 +1,41 @@
+<form class="form-container p-4 bg-dark text-light border rounded shadow-lg" (ngSubmit)="emitCharacter()">
+  <fieldset class="border p-4 rounded">
+    <legend class="text-warning fw-bold text-center">Character Information</legend>
+    <hr class="border-warning mx-auto w-70">
+    <div class="mb-4">
+      <label for="characterName" class="form-label text-light">Name of Character</label>
+      <input type="text"
+             id="characterName"
+             [(ngModel)]="character.completeName"
+             name="completeName"
+             class="form-control bg-secondary text-light border-light"
+             placeholder="Enter character name">
+    </div>
+
+    <div class="mb-4">
+      <label for="characterPower" class="form-label text-light">Power of Character</label>
+      <input type="number"
+             id="characterPower"
+             [(ngModel)]="character.power"
+             name="power"
+             class="form-control bg-secondary text-light border-light"
+             placeholder="Enter character power">
+    </div>
+
+    <div class="mb-4">
+      <label for="characterAbilities" class="form-label text-light">Abilities</label>
+      <input type="text"
+             id="characterAbilities"
+             [(ngModel)]="character.abilities"
+             name="abilities"
+             class="form-control bg-secondary text-light border-light"
+             placeholder="Enter abilities">
+    </div>
+
+    <div class="d-flex gap-3 justify-content-center mt-4">
+      <button type="submit"  class="btn btn-outline-warning px-4 py-2 fw-bold shadow">Add</button>
+      <button type="button" class="btn btn-outline-light px-4 py-2 fw-bold shadow">Cancel</button>
+    </div>
+  </fieldset>
+<!--  <pre>{{character| json}}</pre>-->
+</form>

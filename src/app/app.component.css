@@ -1,0 +1,49 @@
+.container {
+  /* Estilo para el bloque principal del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container__title {
+  /* Estilo para el título */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container__description {
+  /* Estilo para la descripción */
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container__value {
+  /* Estilo para el valor del contador */
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container__buttons {
+  /* Estilo para el contenedor de botones */
+  display: flex; /* Usar flex para alinear los botones */
+  flex-direction: column; /* Coloca los botones en una columna */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espaciado entre botones */
+}
+
+.container__button {
+  /* Estilo base para todos los botones */
+  padding: 10px 20px; /* Más espacio horizontal */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white; /* Texto en blanco */
+  width: 150px; /* Ajusta el ancho de los botones */
+}
+

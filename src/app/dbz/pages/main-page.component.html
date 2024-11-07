@@ -1,0 +1,22 @@
+<section class="container my-4">
+  <header class="text-center mb-4">
+    <h2 class="h3 text-light">
+      Dragon Ball <span class="text-warning fw-bold">Z</span> Characters
+    </h2>
+    <hr class="border-warning mx-auto w-50">
+  </header>
+
+  <div class="row d-flex justify-content-between align-items-start gap-4">
+    <div class="col-md-4">
+      <app-dbz-list
+        [characterList]="characters"
+        (onDeleteById)="onDeleteCharacterById($event)" ></app-dbz-list>
+    </div>
+
+    <div class="col-md-7">
+      <app-dbz-agree-character
+        (addCharacter)="addCharacter($event)">
+      </app-dbz-agree-character>
+    </div>
+  </div>
+</section>

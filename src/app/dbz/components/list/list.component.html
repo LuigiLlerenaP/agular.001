@@ -1,0 +1,43 @@
+<aside class="character-aside p-4 rounded shadow-lg mx-auto bg-primary-dark">
+  <h3 class="h5 text-light mb-4 text-center">List of Characters</h3>
+  <hr class="border-light mx-auto w-50">
+  <div class="card bg-secondary-dark text-light border-0 rounded shadow-sm">
+    <div class="overflow-auto" style="max-height: 375px;">
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let character of characterList; let i = index; let isFirst = first; let isLast = last; let isEven = even; let isOdd = odd"
+            class="list-group-item rounded py-3 my-2 mx-2 transition-all d-flex flex-column align-items-center text-center hover:bg-primary hover:shadow-lg"
+            [ngClass]="{
+              'bg-secondary text-light': isOdd,
+              'bg-secondary-light text-dark': isEven,
+              'border-accent border-2': isFirst,
+              'border-accent-light border-2': isLast
+            }">
+
+          <!-- Información del personaje -->
+          <div class="text-center mb-3">
+            <h5 class="card-title character-name">
+              <span class="text-accent fw-bold">{{ i + 1 }}. </span>
+              <strong class="text-accent">Name: </strong> {{ character.completeName }}
+            </h5>
+            <p class="mb-1">
+              <strong class="text-info">Power: </strong> <span>{{ character.power }}</span>
+            </p>
+            <p>
+              <strong class="text-info">Abilities: </strong> <span>{{ character.abilities }}</span>
+            </p>
+          </div>
+
+          <!-- Botones de acción, centrados debajo del texto -->
+          <div class="d-flex gap-2 justify-content-center">
+            <button class="btn btn-outline-accent btn-sm" >
+              <i class="bi bi-pencil"></i> Editar
+            </button>
+            <button class="btn btn-outline-secondary-light btn-sm" (click)="onDeleteCharacterById(character.id)">
+              <i class="bi bi-trash"></i> Eliminar
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>

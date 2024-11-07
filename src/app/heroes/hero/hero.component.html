@@ -1,0 +1,40 @@
+<div class="container mt-5 p-4 bg-light shadow-sm rounded">
+  <h1 class="text-center mb-4 display-4 text-primary">{{heroName}}</h1>
+
+  <div class="row justify-content-center">
+    <dl class="col-md-8">
+      <div class="row mb-3">
+        <dt class="col-12">Full Name:</dt>
+        <dd class="col-12">{{realName}}</dd>
+      </div>
+      <div class="row mb-3">
+        <dt class="col-12">Age:</dt>
+        <dd class="col-12">{{age}}</dd>
+      </div>
+      <div class="row mb-3">
+        <dt class="col-12">Method:</dt>
+        <dd class="col-12">{{ descriptionHero() }}</dd>
+      </div>
+      <div class="row mb-3">
+        <dt class="col-12">Capitalize:</dt>
+        <dd class="col-12 text-capitalize">{{capitalizedName(heroName)}}</dd>
+        <dd class="col-12 text-capitalize">{{capitalizedName(realName)}}</dd>
+      </div>
+    </dl>
+  </div>
+
+  <div  class="text-center mt-4">
+    <button *ngIf="heroName !== 'BATMAN'"
+            class="btn btn-outline-dark mx-2"
+            (click)="changeNameHero()"> Change Name
+    </button>
+    <button *ngIf="age !== 34"
+            class="btn btn-secondary mx-2"
+            (click)="changeAgeHero()">Change Age
+    </button>
+    <button
+      class="btn btn-outline-primary mx-2"
+      (click)="restValues()"
+    >Reset Values</button>
+  </div>
+</div>
